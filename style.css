@@ -1,0 +1,131 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fff5f7;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.cat-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.message {
+    color: #ff6b9d;
+    font-size: 18px;
+    margin: 30px 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+}
+
+.accept-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reject-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #ff6b9d;
+    font-weight: bold;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart {
+    font-size: 30px;
+    animation: bounce 0.8s infinite alternate;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 2s ease-in-out infinite;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.fullscreen-heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: none;
+    font-size: 200px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+.message-content {
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+}
